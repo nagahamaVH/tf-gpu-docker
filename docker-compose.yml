@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+    jupyter:
+        container_name: jupyter
+        user: ${CURRENT_UID}
+        build:
+            context: ./containers
+            dockerfile: Dockerfile
+        ports:
+            - 8888:8888
+        stdin_open: true
+        tty: true
+        runtime: nvidia
+        deploy:
+            resources:
+                limits:
+                    memory: 20G
+        volumes:
+            - ./runtime:/notebook:rw
+            - ./src:/notebook/workspace:rw
+            - ./data:/data:ro
+
