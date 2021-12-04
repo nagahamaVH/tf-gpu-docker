@@ -3,7 +3,6 @@ version: '3'
 services:
     jupyter:
         container_name: jupyter
-        user: ${CURRENT_UID}
         build:
             context: ./containers
             dockerfile: Dockerfile

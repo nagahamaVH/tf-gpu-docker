@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:experimental
-FROM nvidia/cuda:11.0-cudnn8-devel-rc
+FROM nvidia/cuda:11.4.2-cudnn8-runtime-ubuntu20.04
 
 RUN apt-get update
 RUN apt-get install python3 python3-pip -y

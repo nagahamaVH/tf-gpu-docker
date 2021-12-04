@@ -3,6 +3,6 @@ numpy
 
 tensorflow-gpu
 # tensorflow-addons
-tensorflow-probability
-tensorflow-datasets
-tensorflow-io
+# tensorflow-probability
+# tensorflow-datasets
+# tensorflow-io
